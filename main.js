@@ -1,1 +1,1 @@
-print.ln("Hello World");
+println("Hello World");
