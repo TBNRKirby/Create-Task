@@ -1,11 +1,14 @@
 var score = 2;
-
+var scoreText;
 function start(){
     var thing = new Rectangle(100,100);
     thing.setPosition(100,100);
     add(thing);
-    mouseClickMethod(goal);
+    mouseClickMethod(clickHandler);
     
+    scoreText = new Text(score);
+	scoreText.setPosition(0, getHeight());
+	add(scoreText);
 }
 function text(text){
 	var txt = new Text(text);
@@ -13,10 +16,21 @@ function text(text){
 	add(txt);
 }
 
-function goal(e){
-    
-    var txt = new Text(score);
-	txt.setPosition(e.getX(),e.getY());
-	add(txt);
-    score++;
+
+function clickHandler(e){
+	var elem = getElementAt(e.getX(), e.getY());
+	if(elem != null && elem.getColor() == Color.black){
+		score++;
+	}else{
+		score--;
+	}
+	
+	if(score == 0){
+		displayMessage("You Lose :(");
+	}
+	if(score == 20){
+		displayMessage("You Win :)");
+	}
+	
+	scoreText.setText(score);
 }
