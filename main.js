@@ -26,10 +26,10 @@ function clickHandler(e){
 	}
 	
 	if(score == 0){
-		displayMessage("You Lose :(");
+		println("You Lose :(");
 	}
 	if(score == 20){
-		displayMessage("You Win :)");
+		println("You Win :)");
 	}
 	
 	scoreText.setText(score);
