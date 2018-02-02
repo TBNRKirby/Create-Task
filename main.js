@@ -47,6 +47,48 @@ function clickHandler(e){
 	scoreText.setText(score);
 }
 function standard(){
+
+    rect(20,175,160,100,Color.black);
+    rect(220,175,160,100,Color.black);
+    rect(20,300,160,100,Color.black);
+    rect(220,300,160,100,Color.black);
+    rect(21,176,158,98,"#FFFFFF");
+    rect(221,176,158,98,"#FFFFFF");
+    rect(21,301,158,98,"#FFFFFF");
+    rect(221,301,158,98,"#FFFFFF");
+}
+
+function rect(x,y,width,height,colour){
+    var box = new Rectangle(width,height);
+    box.setPosition(x,y);
+    box.setColor(colour);
+    add(box);
+}
+/*
+var x = 20;
+var y = 175;
+function isEven(number){
+    if(number % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+var box = [];
+for(var i = 0;i<4;i++){
+    var box = new Rectangle(160,100);
+    var even = ifEven(i);
+    if (even == false){
+        box.setPosition(x,y);
+        if(i>2){
+            box.setPosition(x,y+125);
+        }
+    }else{
+        
+    }
+}
+*/
+/*    
     var box1 = new Rectangle(160,100);
     var box2 = new Rectangle(160,100);
     var box3 = new Rectangle(160,100);
@@ -75,28 +117,5 @@ function standard(){
     add(box6);
     add(box7);
     add(box8);
-}
-/*
-var x = 20;
-var y = 175;
-function isEven(number){
-    if(number % 2 == 0){
-        return true;
-    }else{
-        return false;
-    }
-}
-var box = [];
-for(var i = 0;i<4;i++){
-    var box = new Rectangle(160,100);
-    var even = ifEven(i);
-    if (even == false){
-        box.setPosition(x,y);
-        if(i>2){
-            box.setPosition(x,y+125);
-        }
-    }else{
-        
-    }
-}
-*/
+*/    
+
