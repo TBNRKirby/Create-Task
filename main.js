@@ -1,7 +1,7 @@
 var score = 2;
 var scoreText;
 function start(){
-    var background = new WebImage("https://cdn.pixabay.com/photo/2017/08/21/11/48/circle-2665079_960_720.jpg");
+    var background = new WebImage("https://cdn.pixabay.com/photo/2017/08/21/11/48/pattern-2665078_960_720.jpg");
     background.setSize(getWidth(),getHeight());
     
     background.setPosition(0,0);
@@ -19,11 +19,11 @@ function start(){
 	scoreText.setPosition(0, getHeight());
 	add(scoreText);
 	
-	
+	text("How are you feeling today?",45,100,"17pt Dejavu Sans");
 }
-function text(text){
-	var txt = new Text(text);
-	txt.setPosition(getWidth()/2 - txt.getWidth()/2, 200);
+function text(text,x,y,font){
+	var txt = new Text(text, font);
+	txt.setPosition(x,y);
 	add(txt);
 }
 
@@ -118,4 +118,5 @@ for(var i = 0;i<4;i++){
     add(box7);
     add(box8);
 */    
+
 
