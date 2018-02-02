@@ -59,7 +59,22 @@ function standard(){
     add(box2);
     add(box3);
     add(box4);
-    
+    var box8 = new Rectangle(158,98);
+    var box5 = new Rectangle(158,98);
+    var box6 = new Rectangle(158,98);
+    var box7 = new Rectangle(158,98);
+    box5.setPosition(21,176);
+    box6.setPosition(221,176);
+    box7.setPosition(21,301);
+    box8.setPosition(221,301);
+    box5.setColor("#FFFFFF");
+    box6.setColor("#FFFFFF");
+    box7.setColor("#FFFFFF");
+    box8.setColor("#FFFFFF");
+    add(box5);
+    add(box6);
+    add(box7);
+    add(box8);
 }
 /*
 var x = 20;
@@ -85,5 +100,3 @@ for(var i = 0;i<4;i++){
     }
 }
 */
-
-
