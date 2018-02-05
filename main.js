@@ -1,10 +1,11 @@
+
 var score = 2;
 var scoreText;
 function start(){
     var background = new WebImage("https://cdn.pixabay.com/photo/2017/08/21/11/48/pattern-2665078_960_720.jpg");
-    background.setSize(getWidth(),getHeight());
+    background.setSize(getWidth(),400);
     
-    background.setPosition(0,0);
+    background.setPosition(0,80);
     add(background);
     
 
@@ -19,7 +20,7 @@ function start(){
 	scoreText.setPosition(0, getHeight());
 	add(scoreText);
 	
-	text("How are you feeling today?",45,100,"17pt Dejavu Sans");
+	text("How are you feeling today?",35,80,"20pt Comic Sans MS");
 }
 function text(text,x,y,font){
 	var txt = new Text(text, font);
@@ -118,5 +119,4 @@ for(var i = 0;i<4;i++){
     add(box7);
     add(box8);
 */    
-
 
