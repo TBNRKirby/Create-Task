@@ -2,10 +2,10 @@ var score = 2;
 var scoreText;
 function start(){
     var background = new WebImage("https://cdn.pixabay.com/photo/2017/08/21/11/48/pattern-2665078_960_720.jpg");
-    background.setSize(getWidth(),400);
-    
-    background.setPosition(0,80);
+    background.setSize(getWidth(),480);
+    background.setPosition(0,0);
     add(background);
+    
     
 
     
@@ -19,11 +19,14 @@ function start(){
 	scoreText.setPosition(0, getHeight());
 	add(scoreText);
 	
+	rect(30,47,350,50,Color.white);
 	text("How are you feeling today?",35,80,"20pt Comic Sans MS");
 	
 	
 	happyFace(100,250,Color.black);
     happyFace(100,249,Color.white);
+    
+    eyes(100,210,100,100,Color.black);
 }
 function text(text,x,y,font){
 	var txt = new Text(text, font);
@@ -89,7 +92,16 @@ function happyFace(x,y,color){
     add(rightEye);
     */
 }
-
+function eyes(x,y,width,height,color){
+    var leftEye = new Rectangle(10,20);
+    leftEye.setColor(color);
+    leftEye.setPosition(x-20,y);
+    add(leftEye);
+    var rightEye = new Rectangle(10,20);
+    rightEye.setColor(color);
+    rightEye.setPosition(x+10,y);
+    add(rightEye);
+}
 function sadFace(){
     
 }
