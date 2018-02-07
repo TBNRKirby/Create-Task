@@ -1,4 +1,3 @@
-
 var score = 2;
 var scoreText;
 function start(){
@@ -21,6 +20,10 @@ function start(){
 	add(scoreText);
 	
 	text("How are you feeling today?",35,80,"20pt Comic Sans MS");
+	
+	
+	happyFace(100,175,90,244,300,Color.black);
+    happyFace(100,174,90,244,301,Color.white);
 }
 function text(text,x,y,font){
 	var txt = new Text(text, font);
@@ -64,6 +67,19 @@ function rect(x,y,width,height,colour){
     box.setPosition(x,y);
     box.setColor(colour);
     add(box);
+}
+
+function happyFace(x,y,radius,start,end,color){
+    var mouth = new Arc(radius,start,end,0);
+    mouth.setPosition(x,y);
+    mouth.setColor(color);
+    add(mouth);
+    var leftEye = new Rectangle(10,20);
+    leftEye.setPosition(80,210);
+    add(leftEye);
+    var rightEye = new Rectangle(10,20);
+    rightEye.setPosition(110,210);
+    add(rightEye);
 }
 /*
 var x = 20;
