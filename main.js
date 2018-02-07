@@ -75,10 +75,12 @@ function happyFace(x,y,radius,start,end,color){
     mouth.setColor(color);
     add(mouth);
     var leftEye = new Rectangle(10,20);
-    leftEye.setPosition(80,210);
+    leftEye.setColor(255 - color);
+    leftEye.setPosition(x-20,y+36);
     add(leftEye);
     var rightEye = new Rectangle(10,20);
-    rightEye.setPosition(110,210);
+    rightEye.setColor(255 - color);
+    rightEye.setPosition(x+10,y+36);
     add(rightEye);
 }
 /*
@@ -135,4 +137,3 @@ for(var i = 0;i<4;i++){
     add(box7);
     add(box8);
 */    
-
