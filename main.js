@@ -22,8 +22,8 @@ function start(){
 	text("How are you feeling today?",35,80,"20pt Comic Sans MS");
 	
 	
-	happyFace(100,175,90,244,300,Color.black);
-    happyFace(100,174,90,244,301,Color.white);
+	happyFace(100,250,Color.black);
+    happyFace(100,249,Color.white);
 }
 function text(text,x,y,font){
 	var txt = new Text(text, font);
@@ -69,11 +69,16 @@ function rect(x,y,width,height,colour){
     add(box);
 }
 
-function happyFace(x,y,radius,start,end,color){
-    var mouth = new Arc(radius,start,end,0);
+function happyFace(x,y,color){
+    var mouth = new Oval(100,20);
     mouth.setPosition(x,y);
     mouth.setColor(color);
     add(mouth);
+    var whiteOval = new Oval(100,20);
+    whiteOval.setPosition(x,y);
+    whiteOval.setColor(color);
+    add(whiteOval);
+    /*
     var leftEye = new Rectangle(10,20);
     leftEye.setColor(255 - color);
     leftEye.setPosition(x-20,y+36);
@@ -82,6 +87,11 @@ function happyFace(x,y,radius,start,end,color){
     rightEye.setColor(255 - color);
     rightEye.setPosition(x+10,y+36);
     add(rightEye);
+    */
+}
+
+function sadFace(){
+    
 }
 /*
 var x = 20;
