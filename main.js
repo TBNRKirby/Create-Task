@@ -26,7 +26,9 @@ function start(){
 	happyFace(100,250,Color.black);
     happyFace(100,249,Color.white);
     
-    eyes(100,210,100,100,Color.black);
+    sadFace(300,260,Color.black);
+    sadFace(300,261,Color.white);
+    //eyes(100,210,100,100,Color.black);
 }
 function text(text,x,y,font){
 	var txt = new Text(text, font);
@@ -81,6 +83,7 @@ function happyFace(x,y,color){
     whiteOval.setPosition(x,y);
     whiteOval.setColor(color);
     add(whiteOval);
+    eyes(100,210,100,100,Color.black);
     /*
     var leftEye = new Rectangle(10,20);
     leftEye.setColor(255 - color);
@@ -92,6 +95,23 @@ function happyFace(x,y,color){
     add(rightEye);
     */
 }
+
+function sadFace(x,y,color){
+    var mouth = new Oval(100,20);
+    mouth.setPosition(x,y);
+    mouth.setColor(color);
+    add(mouth);
+    var whiteOval = new Oval(100,20);
+    whiteOval.setPosition(x,y);
+    whiteOval.setColor(color);
+    add(whiteOval);
+    eyes(300,210,100,100,Color.black);
+}
+
+function angryFace(x,y,color){
+    
+}
+
 function eyes(x,y,width,height,color){
     var leftEye = new Rectangle(10,20);
     leftEye.setColor(color);
@@ -102,9 +122,7 @@ function eyes(x,y,width,height,color){
     rightEye.setPosition(x+10,y);
     add(rightEye);
 }
-function sadFace(){
     
-}
 /*
 var x = 20;
 var y = 175;
