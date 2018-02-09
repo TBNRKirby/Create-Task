@@ -1,7 +1,7 @@
 var score = 2;
 var scoreText;
 function start(){
-    var background = new WebImage("https://cdn.pixabay.com/photo/2017/08/21/11/48/pattern-2665078_960_720.jpg");
+    var background = new WebImage("https://cdn.pixabay.com/photo/2017/10/06/11/28/square-pattern-2822790_960_720.jpg");
     background.setSize(getWidth(),480);
     background.setPosition(0,0);
     add(background);
@@ -23,12 +23,17 @@ function start(){
 	text("How are you feeling today?",35,80,"20pt Comic Sans MS");
 	
 	
-	happyFace(100,250,Color.black);
-    happyFace(100,249,Color.white);
+	happyFace();
     
-    sadFace(300,260,Color.black);
-    sadFace(300,261,Color.white);
+    sadFace();
     //eyes(100,210,100,100,Color.black);
+    
+    angryFace(70,310,100,330);
+    //angryFace(130,310,100,330);
+    /*angryFace(130,380,100,360);
+    angryFace(70,380,100,360);
+    */
+    
 }
 function text(text,x,y,font){
 	var txt = new Text(text, font);
@@ -74,8 +79,11 @@ function rect(x,y,width,height,colour){
     add(box);
 }
 
-function happyFace(x,y,color){
-    var mouth = new Oval(100,20);
+function happyFace(){
+    mouth(100,250,100,20,Color.black);
+    mouth2(100,249,100,20);
+    eyes(100,210,100,100,Color.black);
+    /*var mouth = new Oval(100,20);
     mouth.setPosition(x,y);
     mouth.setColor(color);
     add(mouth);
@@ -83,7 +91,8 @@ function happyFace(x,y,color){
     whiteOval.setPosition(x,y);
     whiteOval.setColor(color);
     add(whiteOval);
-    eyes(100,210,100,100,Color.black);
+    */
+    //mouth(100,249,100,20,Color.white);
     /*
     var leftEye = new Rectangle(10,20);
     leftEye.setColor(255 - color);
@@ -96,8 +105,11 @@ function happyFace(x,y,color){
     */
 }
 
-function sadFace(x,y,color){
-    var mouth = new Oval(100,20);
+function sadFace(){
+    mouth(300,260,100,20,Color.black);
+    mouth2(300,261,100,20);
+    eyes(300,210,100,100,Color.black);
+    /*var mouth = new Oval(100,20);
     mouth.setPosition(x,y);
     mouth.setColor(color);
     add(mouth);
@@ -105,11 +117,30 @@ function sadFace(x,y,color){
     whiteOval.setPosition(x,y);
     whiteOval.setColor(color);
     add(whiteOval);
-    eyes(300,210,100,100,Color.black);
+    */
+    //mouth(300,261,100,20,Color.white);
 }
 
-function angryFace(x,y,color){
+function angryFace(a,b,c,d){
+    /*
+    var line = new Line(300,100,250,150);
+    add(line);
+    var line2 = new Line(200,100,250,150);
+    add(line2);
+    var line3 = new Line(200,300,250,250);
+    add(line3);
+    var line4 = new Line(300,300,250,250);
+    add(line4);
+    */
+    var line = new Line(a,b,c,d);
+    add(line);
+
+    var line2 = new Line(a+60,b,c,d);
+    add(line2);
+    eyes(100,335,100,100,Color.black);
     
+    mouth(100,378,75,35,Color.black);
+    mouth2(100,381,75,35);
 }
 
 function eyes(x,y,width,height,color){
@@ -121,6 +152,20 @@ function eyes(x,y,width,height,color){
     rightEye.setColor(color);
     rightEye.setPosition(x+10,y);
     add(rightEye);
+}
+
+function mouth(x,y,a,b,color){
+    var mouth = new Oval(a,b);
+    mouth.setPosition(x,y);
+    mouth.setColor(color);
+    add(mouth);
+}
+
+function mouth2(x,y,a,b){
+    var whiteOval = new Oval(a,b);
+    whiteOval.setPosition(x,y);
+    whiteOval.setColor(Color.white);
+    add(whiteOval);
 }
     
 /*
