@@ -10,8 +10,15 @@ function start(){
 
     
     standard();
+    rect(21,176,158,98,"#FFFF00");
+    rect(221,176,158,98,"#1E90FF");
+    rect(21,301,158,98,"#FF0000");
+    rect(221,301,158,98,"#FFFFFF");
     
-
+    recta(250,330,100,10,Color.black,0);
+    recta(312,315,40,10,Color.black,45);
+    recta(312,345,40,10,Color.black,135);
+    text("more",250,390,"28pt Comic Sans MS");
     
     mouseClickMethod(clickHandler);
     
@@ -40,7 +47,13 @@ function text(text,x,y,font){
 	txt.setPosition(x,y);
 	add(txt);
 }
-
+function recta(x,y,width,height,colour,rotation){
+    var box = new Rectangle(width,height);
+    box.setPosition(x,y);
+    box.setColor(colour);
+    box.setRotation(rotation);
+    add(box);
+}
 
 function clickHandler(e){
 	var elem = getElementAt(e.getX(), e.getY());
