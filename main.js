@@ -81,7 +81,7 @@ function rect(x,y,width,height,colour){
 
 function happyFace(){
     mouth(100,250,100,20,Color.black);
-    mouth2(100,249,100,20);
+    mouth2(100,249,100,20,Color.yellow);
     eyes(100,210,100,100,Color.black);
     /*var mouth = new Oval(100,20);
     mouth.setPosition(x,y);
@@ -107,7 +107,7 @@ function happyFace(){
 
 function sadFace(){
     mouth(300,260,100,20,Color.black);
-    mouth2(300,261,100,20);
+    mouth2(300,261,100,20,"#1E90FF");
     eyes(300,210,100,100,Color.black);
     /*var mouth = new Oval(100,20);
     mouth.setPosition(x,y);
@@ -140,7 +140,7 @@ function angryFace(a,b,c,d){
     eyes(100,335,100,100,Color.black);
     
     mouth(100,378,75,35,Color.black);
-    mouth2(100,381,75,35);
+    mouth2(100,381,75,35,Color.red);
 }
 
 function eyes(x,y,width,height,color){
@@ -161,10 +161,10 @@ function mouth(x,y,a,b,color){
     add(mouth);
 }
 
-function mouth2(x,y,a,b){
+function mouth2(x,y,a,b,color){
     var whiteOval = new Oval(a,b);
     whiteOval.setPosition(x,y);
-    whiteOval.setColor(Color.white);
+    whiteOval.setColor(color);
     add(whiteOval);
 }
     
