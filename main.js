@@ -1,10 +1,6 @@
-var score = 2;
-var scoreText;
+
 function start(){
-    var background = new WebImage("https://cdn.pixabay.com/photo/2017/10/06/11/28/square-pattern-2822790_960_720.jpg");
-    background.setSize(getWidth(),480);
-    background.setPosition(0,0);
-    add(background);
+    background();
     
     
 
@@ -13,18 +9,15 @@ function start(){
     rect(21,176,158,98,"#FFFF00");
     rect(221,176,158,98,"#1E90FF");
     rect(21,301,158,98,"#FF0000");
-    rect(221,301,158,98,"#FFFFFF");
+    rect(221,301,158,98,"#FFFFFE");
     
-    recta(250,330,100,10,Color.black,0);
-    recta(312,315,40,10,Color.black,45);
-    recta(312,345,40,10,Color.black,135);
+    recta(250,330,100,10,"#100000",0);
+    recta(312,315,40,10,"#100000",45);
+    recta(312,345,40,10,"#100000",135);
     text("more",250,390,"28pt Comic Sans MS");
     
     mouseClickMethod(clickHandler);
     
-    scoreText = new Text(score);
-	scoreText.setPosition(0, getHeight());
-	add(scoreText);
 	
 	rect(30,47,350,50,Color.white);
 	text("How are you feeling today?",35,80,"20pt Comic Sans MS");
@@ -42,6 +35,12 @@ function start(){
     */
     
 }
+function background(){
+    var background = new WebImage("https://cdn.pixabay.com/photo/2017/10/06/11/28/square-pattern-2822790_960_720.jpg");
+    background.setSize(getWidth(),480);
+    background.setPosition(0,0);
+    add(background);
+}
 function text(text,x,y,font){
 	var txt = new Text(text, font);
 	txt.setPosition(x,y);
@@ -56,22 +55,16 @@ function recta(x,y,width,height,colour,rotation){
 }
 
 function clickHandler(e){
-	var elem = getElementAt(e.getX(), e.getY());
-	if(elem != null && elem.getColor() == Color.white){
-		score++;
-	}else{
-		score--;
+	var click = getElementAt(e.getX(), e.getY());
+	if(click != null && click.getColor() == Color.yellow){
+		happy();
+	}else if(click != null && click.getColor() == "#1E90FF"){
+	    sad();
+	}else if(click != null && click.getColor() == Color.red){
+	    angry();
+	}else if(click != null && click.getColor() == "#FFFFFE" || click != null && click.getColor() == "#100000"){
+	    more();
 	}
-	
-	if(score == 0){
-		println("You Lose :(");
-	}
-	if(score == 20){
-		println("You Win :)");
-		score = 0;
-	}
-	
-	scoreText.setText(score);
 }
 function standard(){
 
@@ -180,7 +173,32 @@ function mouth2(x,y,a,b,color){
     whiteOval.setColor(color);
     add(whiteOval);
 }
+
+function happy(){
+    background();
+    standard();
     
+    
+}
+function sad(){
+    background();
+    standard();
+    
+    
+}
+function angry(){
+    background();
+    standard();
+    
+    
+}
+function more(){
+    background();
+    standard();
+    
+    
+}
+
 /*
 var x = 20;
 var y = 175;
