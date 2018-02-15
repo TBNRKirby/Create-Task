@@ -67,6 +67,26 @@ function clickHandler(e){
 	    more();
 	}
 }
+
+function clickHandler2(e){
+	var click = getElementAt(e.getX(), e.getY());
+	if(click != null && click.getColor() == "#00FF00"){
+		excited();
+	}else if(click != null && click.getColor() == "#00CED1"){
+	    stressed();
+	}else if(click != null && click.getColor() == "#FFE066"){
+	    hungry();
+	}else if(click != null && click.getColor() == "#191970" || click != null && click.getColor() == "#100000"){
+	    sleepy();
+	}
+}    
+
+function box(){
+    rect(21,176,158,98,"#DDDDDE");
+    rect(221,176,158,98,"#DDDEDD");
+    rect(21,301,158,98,"#DEDDDD");
+    rect(221,301,158,98,"#DDDDDD");
+}
 function standard(){
 
     rect(20,175,160,100,Color.black);
@@ -203,16 +223,13 @@ function line(a,b,c,d){
 function happy(){
     background();
     standard();
-    
+    box();
     
 }
 function sad(){
     background();
     standard();
-    rect(21,176,158,98,"#DDDDDE");
-    rect(221,176,158,98,"#DDDEDD");
-    rect(21,301,158,98,"#DEDDDD");
-    rect(221,301,158,98,"#DDDDDD");
+    box();
     
     text("Want a Hug?",30,230,"18pt Comic Sans MS",Color.black);
     
@@ -246,13 +263,65 @@ function clickHandlerSad(b){
 function angry(){
     background();
     standard();
+    box();
+    
+}
+
+function excited(){
+    background();
+    standard();
+    box();
+    
+}
+
+function stressed(){
+    background();
+    standard();
+    box();
+    
+}
+
+function hungry(){
+    background();
+    standard();
+    box();
+    
+}
+
+function sleepy(){
+    background();
+    standard();
+    box();
+    
+}
+
+function clickHandlerAngery(b){
+    var click = getElementAt(b.getX(), b.getY());
+	if(click != null && click.getColor() == "#DDDDDE"){
+		background();
+	}else if(click != null && click.getColor() == "#DDDEDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DEDDDD"){
+	    var dewae = new WebImage("https://lh3.googleusercontent.com/rm_WVPWnHZhSYdywCNoiZCZTX45gKKQokkf5KO0qAsoPqWsVu-LyH_Kr2jCvcY2sA9O3HA=s85");
+	    dewae.setPosition(50,50);
+	    dewae.setSize(300,300);
+	    add(dewae);
+	}else if(click != null && click.getColor() == "#DDDDDD"){
+	    background();
+	}
     
     
 }
+
 function more(){
     background();
     standard();
     
+    mouseClickMethod(clickHandler2);
+    
+    rect(30,47,350,50,Color.white);
+	text("How are you feeling today?",35,80,"20pt Comic Sans MS",Color.black);
+	
     rect(21,176,158,98,"#00FF00");
     rect(221,176,158,98,"#00CED1");
     rect(21,301,158,98,"#FFE066");
