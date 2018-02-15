@@ -144,7 +144,6 @@ function angryFace(){
     70,310,100,330
     var line = new Line(a,b,c,d);
     add(line);
-
     var line2 = new Line(a+60,b,c,d);
     add(line2);
     */
@@ -210,6 +209,37 @@ function happy(){
 function sad(){
     background();
     standard();
+    rect(21,176,158,98,"#DDDDDE");
+    rect(221,176,158,98,"#DDDEDD");
+    rect(21,301,158,98,"#DEDDDD");
+    rect(221,301,158,98,"#DDDDDD");
+    
+    text("Want a Hug?",30,230,"18pt Comic Sans MS",Color.black);
+    
+    text("Let's Smile!",233,230,"18pt Comic Sans MS",Color.black);
+    
+    text("Let's have",30,340,"18pt Comic Sans MS",Color.black);
+    text("some fun!",30,375,"18pt Comic Sans MS",Color.black);
+    
+    text("Need",233,340,"18pt Comic Sans MS",Color.black);
+    text("Support?",233,375,"18pt Comic Sans MS",Color.black);
+    
+    mouseClickMethod(clickHandlerSad);
+}
+function clickHandlerSad(b){
+    var click = getElementAt(b.getX(), b.getY());
+	if(click != null && click.getColor() == "#DDDDDE"){
+		background();
+	}else if(click != null && click.getColor() == "#DDDEDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DEDDDD"){
+	    var dewae = new WebImage("https://lh3.googleusercontent.com/rm_WVPWnHZhSYdywCNoiZCZTX45gKKQokkf5KO0qAsoPqWsVu-LyH_Kr2jCvcY2sA9O3HA=s85");
+	    dewae.setPosition(50,50);
+	    dewae.setSize(300,300);
+	    add(dewae);
+	}else if(click != null && click.getColor() == "#DDDDDD"){
+	    background();
+	}
     
     
 }
