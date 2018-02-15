@@ -14,13 +14,13 @@ function start(){
     recta(250,330,100,10,"#100000",0);
     recta(312,315,40,10,"#100000",45);
     recta(312,345,40,10,"#100000",135);
-    text("more",250,390,"28pt Comic Sans MS");
+    text("more",250,390,"28pt Comic Sans MS",Color.black);
     
     mouseClickMethod(clickHandler);
     
 	
 	rect(30,47,350,50,Color.white);
-	text("How are you feeling today?",35,80,"20pt Comic Sans MS");
+	text("How are you feeling today?",35,80,"20pt Comic Sans MS",Color.black);
 	
 	
 	happyFace();
@@ -28,7 +28,7 @@ function start(){
     sadFace();
     //eyes(100,210,100,100,Color.black);
     
-    angryFace(70,310,100,330);
+    angryFace();
     //angryFace(130,310,100,330);
     /*angryFace(130,380,100,360);
     angryFace(70,380,100,360);
@@ -41,9 +41,10 @@ function background(){
     background.setPosition(0,0);
     add(background);
 }
-function text(text,x,y,font){
+function text(text,x,y,font,colour){
 	var txt = new Text(text, font);
 	txt.setPosition(x,y);
+	txt.setColor(colour);
 	add(txt);
 }
 function recta(x,y,width,height,colour,rotation){
@@ -127,7 +128,7 @@ function sadFace(){
     //mouth(300,261,100,20,Color.white);
 }
 
-function angryFace(a,b,c,d){
+function angryFace(){
     /*
     var line = new Line(300,100,250,150);
     add(line);
@@ -138,13 +139,19 @@ function angryFace(a,b,c,d){
     var line4 = new Line(300,300,250,250);
     add(line4);
     */
+    
+    /*
+    70,310,100,330
     var line = new Line(a,b,c,d);
     add(line);
 
     var line2 = new Line(a+60,b,c,d);
     add(line2);
-    eyes(100,335,100,100,Color.black);
+    */
+    line(70,310,100,330);
+    line(130,310,100,330);
     
+    eyes(100,335,100,100,Color.black);
     mouth(100,378,75,35,Color.black);
     mouth2(100,381,75,35,Color.red);
 }
@@ -174,6 +181,26 @@ function mouth2(x,y,a,b,color){
     add(whiteOval);
 }
 
+function arc(x,y,radius,start,end,color){
+    var arc = new Arc(radius,start,end,0);
+    arc.setPosition(x,y);
+    arc.setColor(color);
+    add(arc);
+}
+
+function circle(x,y,radius,color){
+    var circle = new Circle(radius);
+    circle.setPosition(x,y);
+    circle.setColor(color);
+    add(circle);
+}
+
+function line(a,b,c,d){
+    var line = new Line(a,b,c,d);
+    add(line);
+
+}
+
 function happy(){
     background();
     standard();
@@ -196,7 +223,42 @@ function more(){
     background();
     standard();
     
+    rect(21,176,158,98,"#00FF00");
+    rect(221,176,158,98,"#00CED1");
+    rect(21,301,158,98,"#FFE066");
+    rect(221,301,158,98,"#191970");
     
+    //Excited Face
+    eyes(100,190,100,100,Color.black);
+    arc(100,230,40,180,360,Color.white);
+    
+    //Stressed Face
+    recta(260,180,3,40,Color.black,50);
+    recta(340,180,3,40,Color.black,-50);
+    eyes(300,208,100,100,Color.black);
+    mouth(300,254,75,35,Color.black);
+    mouth2(300,256,75,35,"#00CED1");
+
+    //Hungry Face
+    eyes(100,315,100,100,Color.black);
+    circle(135,380,15,"#FFB6C1");
+    recta(105,355,30,30,"#FFB6C1",34);
+    arc(100,345,40,180,360,Color.black);
+    arc(100,343,40,180,360,"#FFE066");
+    
+    //Sleepy Face
+    recta(250,320,5,25,Color.white,90);
+    recta(310,320,5,25,Color.white,90);
+    circle(284,370,10,Color.white);
+    text("Z",315,320,"20Pt Arial Black","#484848");
+    text("Z",335,315,"30Pt Arial Black","#484848");
+    text("Z",360,335,"40Pt Arial Black","#484848");
+    
+    /*
+    mouth(100,250,100,20,Color.black);
+    mouth2(100,249,100,20,Color.yellow);
+    eyes(100,210,100,100,Color.black);
+    */
 }
 
 /*
