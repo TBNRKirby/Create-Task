@@ -225,6 +225,21 @@ function happy(){
     standard();
     box();
     
+    mouseClickMethod(clickHandlerHappy);
+    
+}
+function clickHandlerHappy(b){
+    var click = getElementAt(b.getX(), b.getY());
+	if(click != null && click.getColor() == "#DDDDDE"){
+		background();
+	}else if(click != null && click.getColor() == "#DDDEDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DEDDDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DDDDDD"){
+	    background();
+	}
+    
 }
 function sad(){
     background();
@@ -250,14 +265,10 @@ function clickHandlerSad(b){
 	}else if(click != null && click.getColor() == "#DDDEDD"){
 	    background();
 	}else if(click != null && click.getColor() == "#DEDDDD"){
-	    var dewae = new WebImage("https://lh3.googleusercontent.com/rm_WVPWnHZhSYdywCNoiZCZTX45gKKQokkf5KO0qAsoPqWsVu-LyH_Kr2jCvcY2sA9O3HA=s85");
-	    dewae.setPosition(50,50);
-	    dewae.setSize(300,300);
-	    add(dewae);
+	    background();
 	}else if(click != null && click.getColor() == "#DDDDDD"){
 	    background();
 	}
-    
     
 }
 function angry(){
@@ -265,36 +276,8 @@ function angry(){
     standard();
     box();
     
+    mouseClickMethod(clickHandlerAngery);
 }
-
-function excited(){
-    background();
-    standard();
-    box();
-    
-}
-
-function stressed(){
-    background();
-    standard();
-    box();
-    
-}
-
-function hungry(){
-    background();
-    standard();
-    box();
-    
-}
-
-function sleepy(){
-    background();
-    standard();
-    box();
-    
-}
-
 function clickHandlerAngery(b){
     var click = getElementAt(b.getX(), b.getY());
 	if(click != null && click.getColor() == "#DDDDDE"){
@@ -302,16 +285,96 @@ function clickHandlerAngery(b){
 	}else if(click != null && click.getColor() == "#DDDEDD"){
 	    background();
 	}else if(click != null && click.getColor() == "#DEDDDD"){
-	    var dewae = new WebImage("https://lh3.googleusercontent.com/rm_WVPWnHZhSYdywCNoiZCZTX45gKKQokkf5KO0qAsoPqWsVu-LyH_Kr2jCvcY2sA9O3HA=s85");
-	    dewae.setPosition(50,50);
-	    dewae.setSize(300,300);
-	    add(dewae);
+	    background();
 	}else if(click != null && click.getColor() == "#DDDDDD"){
 	    background();
 	}
     
     
 }
+function excited(){
+    background();
+    standard();
+    box();
+    
+    mouseClickMethod(clickHandlerExcited);
+    
+}
+function clickHandlerExcited(b){
+    var click = getElementAt(b.getX(), b.getY());
+	if(click != null && click.getColor() == "#DDDDDE"){
+		background();
+	}else if(click != null && click.getColor() == "#DDDEDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DEDDDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DDDDDD"){
+	    background();
+	}
+    
+}
+function stressed(){
+    background();
+    standard();
+    box();
+    
+    mouseClickMethod(clickHandlerStressed);
+}
+function clickHandlerStressed(b){
+    var click = getElementAt(b.getX(), b.getY());
+	if(click != null && click.getColor() == "#DDDDDE"){
+		background();
+	}else if(click != null && click.getColor() == "#DDDEDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DEDDDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DDDDDD"){
+	    background();
+	}
+    
+}
+function hungry(){
+    background();
+    standard();
+    box();
+    
+    mouseClickMethod(clickHandlerHungry);
+}
+function clickHandlerHungry(b){
+    var click = getElementAt(b.getX(), b.getY());
+	if(click != null && click.getColor() == "#DDDDDE"){
+		background();
+	}else if(click != null && click.getColor() == "#DDDEDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DEDDDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DDDDDD"){
+	    background();
+	}
+    
+}
+function sleepy(){
+    background();
+    standard();
+    box();
+    
+    mouseClickMethod(clickHandlerSleepy);
+    
+}
+function clickHandlerSleepy(b){
+    var click = getElementAt(b.getX(), b.getY());
+	if(click != null && click.getColor() == "#DDDDDE"){
+		background();
+	}else if(click != null && click.getColor() == "#DDDEDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DEDDDD"){
+	    background();
+	}else if(click != null && click.getColor() == "#DDDDDD"){
+	    background();
+	}
+    
+}
+
 
 function more(){
     background();
