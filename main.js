@@ -225,6 +225,16 @@ function happy(){
     standard();
     box();
     
+    text("Challenge", 50,220,"18Pt Comic Sans MS",Color.black);
+    text("Yourself",52,250,"18Pt Comic Sans MS",Color.black);
+    text("Spread the",240,220,"18Pt Comic Sans MS",Color.black);
+    text("Positivity",250,250,"18Pt Comic Sans MS",Color.black);
+    //text("Try",50,325,"18Pt Comic Sans MS",Color.black);
+    text("Something",40,345,"18Pt Comic Sans MS",Color.black);
+    text("New",70,375,"18Pt Comic Sans MS",Color.black);
+    text("Talk to",260,345,"18Pt Comic Sans MS",Color.black);
+    text("Someone",250,375,"18Pt Comic Sans MS",Color.black);
+    
     mouseClickMethod(clickHandlerHappy);
     
 }
@@ -297,6 +307,16 @@ function excited(){
     standard();
     box();
     
+    rect(0,47,400,50,Color.white);
+	text("What are you excited about?",20,80,"20pt Comic Sans MS",Color.black);
+	
+	text("Anyone",60,210,"18Pt Comic Sans Ms",Color.black);
+	text("Special?",60,240,"18Pt Comic Sans Ms",Color.black);
+	text("Family",260,210,"18Pt Comic Sans Ms",Color.black);
+	text("Visiting?",255,240,"18Pt Comic Sans Ms",Color.black);
+	text("Vacation?",50,355,"18Pt Comic Sans Ms",Color.black);
+	text("Other",260,355,"18Pt Comic Sans Ms",Color.black);
+	
     mouseClickMethod(clickHandlerExcited);
     
 }
@@ -338,6 +358,14 @@ function hungry(){
     standard();
     box();
     
+    rect(0,47,400,50,Color.white);
+	text("What time is it?",95,80,"20pt Comic Sans MS",Color.black);
+	
+	text("Breakfast?",30,230,"20pt Comic Sans MS",Color.black);
+	text("Lunch?",260,230,"20pt Comic Sans MS",Color.black);
+	text("Dinner?",50,355,"20pt Comic Sans MS",Color.black);
+	text("Desert?",255,355,"20pt Comic Sans MS",Color.black);
+	
     mouseClickMethod(clickHandlerHungry);
 }
 function clickHandlerHungry(b){
@@ -358,6 +386,13 @@ function sleepy(){
     standard();
     box();
     
+    text("Take A Nap",25,230,"20pt Comic Sans MS",Color.black);
+	text("Go Outside",230,230,"20pt Comic Sans MS",Color.black);
+	text("Listen to",45,345,"20pt Comic Sans MS",Color.black);
+	text("Music",60,370,"20pt Comic Sans MS",Color.black);
+	text("Take A Cold",225,345,"20pt Comic Sans MS",Color.black);
+	text("Shower",255,370,"20pt Comic Sans MS",Color.black);
+	
     mouseClickMethod(clickHandlerSleepy);
     
 }
