@@ -286,6 +286,17 @@ function angry(){
     standard();
     box();
     
+    text("Take a",55,215,"18pt Comic Sans MS",Color.black);
+    text("Breather",45,245,"18pt Comic Sans MS",Color.black);
+    
+    text("Count to 10",235,230,"18pt Comic Sans MS",Color.black);
+    
+    text("Want to",50,345,"18pt Comic Sans MS",Color.black);
+    text("Vent?",65,375,"18pt Comic Sans MS",Color.black);
+    
+    text("Lets go for",240,345,"18pt Comic Sans MS",Color.black);
+    text("a Walk",260,375,"18pt Comic Sans MS",Color.black);
+    
     mouseClickMethod(clickHandlerAngery);
 }
 function clickHandlerAngery(b){
@@ -337,6 +348,18 @@ function stressed(){
     background();
     standard();
     box();
+    
+    text("Get some",45,215,"18pt Comic Sans MS",Color.black);
+    text("More Sleep",35,245,"18pt Comic Sans MS",Color.black);
+    
+    text("Let's",270,215,"18pt Comic Sans MS",Color.black);
+    text("Meditate",250,245,"18pt Comic Sans MS",Color.black);   
+    
+    text("Try Time",45,345,"18pt Comic Sans MS",Color.black);
+    text("Management",30,375,"18pt Comic Sans MS",Color.black);
+    
+    text("Eat Healthy",235,360,"18pt Comic Sans MS",Color.black);
+
     
     mouseClickMethod(clickHandlerStressed);
 }
