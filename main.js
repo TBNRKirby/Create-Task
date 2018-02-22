@@ -1,10 +1,6 @@
 
 function start(){
     background();
-    
-    
-
-    
     standard();
     rect(21,176,158,98,"#FFFF00");
     rect(221,176,158,98,"#1E90FF");
@@ -18,7 +14,6 @@ function start(){
     
     mouseClickMethod(clickHandler);
     
-	
 	rect(30,47,350,50,Color.white);
 	text("How are you feeling today?",35,80,"20pt Comic Sans MS",Color.black);
 	
@@ -26,13 +21,9 @@ function start(){
 	happyFace();
     
     sadFace();
-    //eyes(100,210,100,100,Color.black);
     
     angryFace();
-    //angryFace(130,310,100,330);
-    /*angryFace(130,380,100,360);
-    angryFace(70,380,100,360);
-    */
+    
     
 }
 function background(){
@@ -110,63 +101,17 @@ function happyFace(){
     mouth(100,250,100,20,Color.black);
     mouth2(100,249,100,20,Color.yellow);
     eyes(100,210,100,100,Color.black);
-    /*var mouth = new Oval(100,20);
-    mouth.setPosition(x,y);
-    mouth.setColor(color);
-    add(mouth);
-    var whiteOval = new Oval(100,20);
-    whiteOval.setPosition(x,y);
-    whiteOval.setColor(color);
-    add(whiteOval);
-    */
-    //mouth(100,249,100,20,Color.white);
-    /*
-    var leftEye = new Rectangle(10,20);
-    leftEye.setColor(255 - color);
-    leftEye.setPosition(x-20,y+36);
-    add(leftEye);
-    var rightEye = new Rectangle(10,20);
-    rightEye.setColor(255 - color);
-    rightEye.setPosition(x+10,y+36);
-    add(rightEye);
-    */
+    
 }
 
 function sadFace(){
     mouth(300,260,100,20,Color.black);
     mouth2(300,261,100,20,"#1E90FF");
     eyes(300,210,100,100,Color.black);
-    /*var mouth = new Oval(100,20);
-    mouth.setPosition(x,y);
-    mouth.setColor(color);
-    add(mouth);
-    var whiteOval = new Oval(100,20);
-    whiteOval.setPosition(x,y);
-    whiteOval.setColor(color);
-    add(whiteOval);
-    */
-    //mouth(300,261,100,20,Color.white);
 }
 
 function angryFace(){
-    /*
-    var line = new Line(300,100,250,150);
-    add(line);
-    var line2 = new Line(200,100,250,150);
-    add(line2);
-    var line3 = new Line(200,300,250,250);
-    add(line3);
-    var line4 = new Line(300,300,250,250);
-    add(line4);
-    */
-    
-    /*
-    70,310,100,330
-    var line = new Line(a,b,c,d);
-    add(line);
-    var line2 = new Line(a+60,b,c,d);
-    add(line2);
-    */
+
     line(70,310,100,330);
     line(130,310,100,330);
     
@@ -229,7 +174,6 @@ function happy(){
     text("Yourself",52,250,"18Pt Comic Sans MS",Color.black);
     text("Spread the",240,220,"18Pt Comic Sans MS",Color.black);
     text("Positivity",250,250,"18Pt Comic Sans MS",Color.black);
-    //text("Try",50,325,"18Pt Comic Sans MS",Color.black);
     text("Something",40,345,"18Pt Comic Sans MS",Color.black);
     text("New",70,375,"18Pt Comic Sans MS",Color.black);
     text("Talk to",260,345,"18Pt Comic Sans MS",Color.black);
@@ -535,3 +479,51 @@ for(var i = 0;i<4;i++){
     add(box7);
     add(box8);
 */    
+    /*
+    var line = new Line(300,100,250,150);
+    add(line);
+    var line2 = new Line(200,100,250,150);
+    add(line2);
+    var line3 = new Line(200,300,250,250);
+    add(line3);
+    var line4 = new Line(300,300,250,250);
+    add(line4);
+    */
+    
+    /*
+    70,310,100,330
+    var line = new Line(a,b,c,d);
+    add(line);
+    var line2 = new Line(a+60,b,c,d);
+    add(line2);
+    */
+    /*var mouth = new Oval(100,20);
+    mouth.setPosition(x,y);
+    mouth.setColor(color);
+    add(mouth);
+    var whiteOval = new Oval(100,20);
+    whiteOval.setPosition(x,y);
+    whiteOval.setColor(color);
+    add(whiteOval);
+    */
+    //mouth(300,261,100,20,Color.white);
+    /*var mouth = new Oval(100,20);
+    mouth.setPosition(x,y);
+    mouth.setColor(color);
+    add(mouth);
+    var whiteOval = new Oval(100,20);
+    whiteOval.setPosition(x,y);
+    whiteOval.setColor(color);
+    add(whiteOval);
+    */
+    //mouth(100,249,100,20,Color.white);
+    /*
+    var leftEye = new Rectangle(10,20);
+    leftEye.setColor(255 - color);
+    leftEye.setPosition(x-20,y+36);
+    add(leftEye);
+    var rightEye = new Rectangle(10,20);
+    rightEye.setColor(255 - color);
+    rightEye.setPosition(x+10,y+36);
+    add(rightEye);
+    */
